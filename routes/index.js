@@ -13,12 +13,24 @@ router.post('/route/uc/braunstein', function(req, res) {
   return res.send("Test");
 });
 
+/*
+  Test demonstration function working on a test building.
+  JSON Format:
+  {
+    "fromLocation": string,
+    "toLocation": string,
+    "accessibility": bool
+  }
+*/
 router.post('/route/test', function(req, res) {
   let fromLocation = req.body.fromLocation;
   console.log(fromLocation);
   let toLocation = req.body.toLocation;
   console.log(toLocation);
-  let route = testBuilding.getDirections(fromLocation, toLocation);
+  let accessibility = req.body.accessibility;
+  console.log("Accessibility: " + accessibility);
+  let building = accessibility ? testBuilding.testBuildingAccessible : testBuilding.testBuilding;
+  let route = building.getDirections(fromLocation, toLocation);
   console.log(route);
   res.send(route);
 });
