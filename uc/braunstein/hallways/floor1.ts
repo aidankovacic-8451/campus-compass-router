@@ -18,7 +18,7 @@ const { LEFT, RIGHT, FRONT } = Direction;
 const hallways: UCHallway[] = [
   // 
   new Hallway([
-    new Stairs(LEFT, onFloor("stair 198a", 1)),
+    new Stairs(FRONT, onFloor("stair 198a", 1)),
     new Room("101", LEFT),
     new Room("100", RIGHT),
     new Room("102", RIGHT),
@@ -35,6 +35,7 @@ const hallways: UCHallway[] = [
     new Room("118", RIGHT),
     new Room("119", LEFT),
     new Room("122", RIGHT),
+    new Stairs(LEFT, onFloor("elevator 197a", 1), "the elevator"),
     new Room("124", RIGHT),
     new Room("125", LEFT),
     new Room("127", LEFT),

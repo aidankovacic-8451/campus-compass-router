@@ -1,7 +1,7 @@
 "use strict";
 var room_finder_1 = require("room-finder");
 var LEFT = room_finder_1.Direction.LEFT, RIGHT = room_finder_1.Direction.RIGHT, FRONT = room_finder_1.Direction.FRONT;
-var testBuilding = new room_finder_1.Building([
+var all = new room_finder_1.Building([
     new room_finder_1.Hallway([
         new room_finder_1.Stairs(LEFT, (0, room_finder_1.onFloor)("stair-a", 1)),
         new room_finder_1.Room("111"),
@@ -37,7 +37,7 @@ var testBuilding = new room_finder_1.Building([
         new room_finder_1.Room("322"),
     ]),
 ]);
-(0, room_finder_1.assertValidBuilding)(testBuilding);
-var testBuildingAccessible = testBuilding.withAllowedConnectionTypes(function (s) { return !s.includes("stair"); });
-module.exports = { testBuilding: testBuilding, testBuildingAccessible: testBuildingAccessible };
+(0, room_finder_1.assertValidBuilding)(all);
+var accessible = all.withAllowedConnectionTypes(function (s) { return !s.includes("stair"); });
+module.exports = { testBuilding: all, accessible: accessible };
 //# sourceMappingURL=index.js.map

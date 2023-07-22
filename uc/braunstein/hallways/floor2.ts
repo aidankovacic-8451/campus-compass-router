@@ -18,7 +18,7 @@ import {
   const hallways: UCHallway[] = [
     // 
     new Hallway([
-      new Stairs(LEFT, onFloor("stair 198a", 1)),
+      new Stairs(LEFT, onFloor("stair 198a", 2)),
       new Room("201", LEFT),
       new Room("202", RIGHT),
       new Room("204", RIGHT),
@@ -32,6 +32,7 @@ import {
       new Room("220", RIGHT),
       new Room("215", LEFT),
       new Room("219", LEFT),
+      new Stairs(LEFT, onFloor("elevator 197a", 2), "the elevator"),
       new Room("223", LEFT),
       new Room("225", LEFT),
       new Room("227", LEFT),
@@ -40,7 +41,7 @@ import {
       new Room("230", LEFT),
       new Room("240", FRONT),
       new Turn(Direction.LEFT),
-      new Stairs(LEFT, onFloor("stair 198b", 1)),
+      new Stairs(LEFT, onFloor("stair 198b", 2)),
     ])
   ];
   export default hallways;
