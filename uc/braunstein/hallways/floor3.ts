@@ -40,7 +40,6 @@ import {
       new Room("338", RIGHT),
       new Turn(Direction.LEFT),
       new Room("346", RIGHT),
-      new Room("346", RIGHT),
     ])
   ];
   export default hallways;
