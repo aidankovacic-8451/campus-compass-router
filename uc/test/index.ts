@@ -14,7 +14,7 @@ import {
   const { LEFT, RIGHT, FRONT } = Direction;
   type MyStairs = "stair-a" | "stair-b" | "elevator-a";
   
-  const testBuilding = new Building([
+  const all = new Building([
     new Hallway([
         new Stairs(LEFT, onFloor("stair-a", 1)),
         new Room("111"),
@@ -55,10 +55,10 @@ import {
       ]),
   ]);
 
-  assertValidBuilding(testBuilding);
+  assertValidBuilding(all);
 
-  const testBuildingAccessible = testBuilding.withAllowedConnectionTypes(
+  const accessible = all.withAllowedConnectionTypes(
     s => !s.includes("stair")
   );
 
-export = { testBuilding, testBuildingAccessible };
+export = { testBuilding: all, accessible };
