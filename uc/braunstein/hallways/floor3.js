@@ -28,7 +28,6 @@ var hallways = [
         new room_finder_1.Room("338", RIGHT),
         new room_finder_1.Turn(room_finder_1.Direction.LEFT),
         new room_finder_1.Room("346", RIGHT),
-        new room_finder_1.Room("346", RIGHT),
     ])
 ];
 exports.default = hallways;

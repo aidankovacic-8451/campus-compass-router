@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 const buildings = {
-  "braunstein": braunsteinHall,
+  "braunstein-uc": braunsteinHall,
   "test": testBuilding
 }
 

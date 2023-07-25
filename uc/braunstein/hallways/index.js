@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var floor1_1 = require("./floor1");
 var floor2_1 = require("./floor2");
 var floor3_1 = require("./floor3");
-var hallways = __spreadArray(__spreadArray(__spreadArray([], floor1_1.default, true), floor2_1.default, true), floor3_1.default, true);
+var floor4_1 = require("./floor4");
+var hallways = __spreadArray(__spreadArray(__spreadArray(__spreadArray([], floor1_1.default, true), floor2_1.default, true), floor3_1.default, true), floor4_1.default, true);
 exports.default = hallways;
 //# sourceMappingURL=index.js.map
