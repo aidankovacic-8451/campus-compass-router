@@ -34,7 +34,6 @@ router.post('/route/uc/:building', function(req, res) {
   let accessibility = req.body.accessibility;
   console.log("Accessibility: " + accessibility);
   let building = buildings[buildingParam];
-  console.log(building)
   let buildingType = accessibility ? building.accessible : building.all;
   let route = buildingType.getDirections(fromLocation, toLocation);
   console.log(route);
